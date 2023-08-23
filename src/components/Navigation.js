@@ -1,9 +1,21 @@
-import React from 'react';
+/* eslint-disable max-len */
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from '../assets/Logo.png';
 
+const SubMenu = () => {
+  return (
+    <DropdownMenu>
+      <NavLink to="/products">Cups</NavLink>
+      <NavLink to="products">Plates</NavLink>
+    </DropdownMenu>
+  )
+}
+
 export const Navigation = () => {
+  const [visible, setVisible] = useState(false);
+
   return (
     <NavBar>
       <NavLink to="/">
@@ -15,6 +27,10 @@ export const Navigation = () => {
         </li>
         <li>
           <NavLink to="/about">About</NavLink>
+        </li>
+        <li onMouseLeave={() => setVisible(false)}>
+          <NavLink onMouseEnter={() => setVisible(true)}>Products</NavLink>
+          {visible && <SubMenu />}
         </li>
         <li>
           <NavLink to="/contact">Contact</NavLink>
@@ -43,6 +59,7 @@ const ListWrapper = styled.ul`
     display: flex;
     li {
         padding: 0 15px;   
+        position: relative;
     }
     li a {
         text-decoration: none;
@@ -51,4 +68,14 @@ const ListWrapper = styled.ul`
     text-decoration: underline;
     font-weight: bold;
   }
+`
+const DropdownMenu = styled.ul`
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(255,255,255, 0.5);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
 `
