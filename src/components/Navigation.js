@@ -6,7 +6,9 @@ import Logo from '../assets/Logo.png';
 export const Navigation = () => {
   return (
     <NavBar>
-      <LogoImage src={Logo} alt="Logo" />
+      <NavLink to="/">
+        <LogoImage src={Logo} alt="Logo" />
+      </NavLink>
       <ListWrapper>
         <li>
           <NavLink to="/">Home</NavLink>
