@@ -23,20 +23,6 @@ export const About = () => {
   )
 }
 
-const RightSide = styled.div`
-@media screen and (min-width: 768px) {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
-`
-const LeftSide = styled.div`
-@media screen and (min-width: 768px) {
-  width: 50%;
-  padding: 8rem;
-  }
-`
 const AboutContainer = styled.div`
 margin: 8rem 0;
 display: flex;
@@ -44,14 +30,45 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     flex-direction: row-reverse;
+  }
+`
+
+const RightSide = styled.div`
+@media screen and (min-width: 768px) {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+
+  }
+`
+const LeftSide = styled.div`
+@media screen and (min-width: 768px) {
+  width: 100%;
+  padding: 8rem;
+  }
+@media screen and (min-width: 1024px) {
+  width: 100%;
+  padding: 8rem;
   }
 `
 const ImageContainer = styled.div`
   background-color: none;
 
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
+  display: block;
+  background-color: rgba(132, 85, 55, 0.6);
+  width: 100%;
+  height: 500px;
+  position: relative;
+  }
+
+@media screen and (min-width: 1024px) {
   display: block;
   background-color: rgba(132, 85, 55, 0.6);
   width: 50%;
@@ -61,6 +78,15 @@ const ImageContainer = styled.div`
 `
 const HeadShotImage = styled.img`
 @media screen and (min-width: 768px) {
+  border: 5px solid #fff;
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+  position: absolute;
+  top: 50px;
+  left: -60px;
+  } 
+@media screen and (min-width: 1024px) {
   border: 5px solid #fff;
   height: 500px;
   width: 500px;
