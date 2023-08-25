@@ -43,18 +43,17 @@ const RightSide = styled.div`
   align-items: center;
   }
   @media screen and (min-width: 1024px) {
-    width: 100%;
-
+    width: 50%;
   }
 `
 const LeftSide = styled.div`
 @media screen and (min-width: 768px) {
   width: 100%;
-  padding: 8rem;
+  padding: 8rem 0;
   }
 @media screen and (min-width: 1024px) {
   width: 100%;
-  padding: 8rem;
+  padding-right: 8rem;
   }
 `
 const ImageContainer = styled.div`
@@ -71,7 +70,7 @@ const ImageContainer = styled.div`
 @media screen and (min-width: 1024px) {
   display: block;
   background-color: rgba(132, 85, 55, 0.6);
-  width: 50%;
+  width: 100%;
   height: 500px;
   position: relative;
   }
