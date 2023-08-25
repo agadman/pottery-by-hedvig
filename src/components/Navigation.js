@@ -62,27 +62,29 @@ export const Navigation = () => {
           <MobileNavBar>
             <FontAwesomeIcon onClick={() => setIsOpen(!isOpen)} className="bar-icon" icon={faBars} />
             <Menu className="burger-menu" isOpen={isOpen} selectedKey="entry" onClose={() => setIsOpen(false)}>
-              <li>
-                <NavLink to="/">
-                  <Item itemKey="home" text="Home" />
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">
-                  <Item itemKey="about" text="About" />
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/products" onClick={() => setVisible((prev) => !prev)}>
-                  <Item itemKey="products" text="Products" />
-                </NavLink>
-                {visible && <MobileSubDropMenu />}
-              </li>
-              <li>
-                <NavLink to="/contact">
-                  <Item itemKey="contact" text="Contact" />
-                </NavLink>
-              </li>
+              <ul>
+                <li>
+                  <NavLink to="/">
+                    <Item itemKey="home" text="Home" />
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about">
+                    <Item itemKey="about" text="About" />
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/products" onClick={() => setVisible((prev) => !prev)}>
+                    <Item itemKey="products" text="Products" />
+                  </NavLink>
+                  {visible && <MobileSubDropMenu />}
+                </li>
+                <li>
+                  <NavLink to="/contact">
+                    <Item itemKey="contact" text="Contact" />
+                  </NavLink>
+                </li>
+              </ul>
             </Menu>
           </MobileNavBar>
         </LogoAndNavContainer>
@@ -127,14 +129,17 @@ const ListWrapper = styled.ul`
   }
 `
 const DropdownMenu = styled.ul`
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(255,255,255, 0.5);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
+  padding-left: 3rem;
+    @media screen and (min-width: 850px) {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: rgba(255,255,255, 0.5);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+  }
 `
 const MobileNavBar = styled.div`
   .burger-menu {
@@ -143,6 +148,12 @@ const MobileNavBar = styled.div`
   .bar-icon {
     font-size: 2rem;
   }
+  ul {
+    list-style: none;
+  }
+  li a {
+        text-decoration: none;
+    }
   @media screen and (min-width: 849px) {
     display: none !important;
   } 
