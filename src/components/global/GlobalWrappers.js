@@ -9,6 +9,14 @@ export const OuterWrapper = styled.div`
     background-color: var(--color-beige);
 `
 export const InnerWrapper = styled.div`
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        width: 80%;
+  }
 `
