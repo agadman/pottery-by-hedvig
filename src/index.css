@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
 :root {
   --color-beige: #f6f6e7;
   --color-blue: #A5ADA6;
@@ -10,4 +12,9 @@ div {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
 }

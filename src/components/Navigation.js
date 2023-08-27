@@ -50,8 +50,8 @@ export const Navigation = () => {
               <li>
                 <NavLink to="/about">About</NavLink>
               </li>
-              <li onMouseLeave={() => setVisible(false)}>
-                <NavLink onMouseEnter={() => setVisible(true)}>Products</NavLink>
+              <li onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
+                <NavLink to="/products">Products</NavLink>
                 {visible && <SubDropMenu />}
               </li>
               <li>
@@ -122,10 +122,13 @@ const ListWrapper = styled.ul`
     }
     li a {
         text-decoration: none;
+        color: #333;
     }
     .active {
     text-decoration: underline;
-    font-weight: bold;
+  }
+  a:hover{
+    font-weight: 600;
   }
 `
 const DropdownMenu = styled.ul`
@@ -154,6 +157,9 @@ const MobileNavBar = styled.div`
   li a {
         text-decoration: none;
     }
+    .active {
+    text-decoration: underline;
+  }
   @media screen and (min-width: 849px) {
     display: none !important;
   } 

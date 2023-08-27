@@ -38,8 +38,7 @@ export const Contact = () => {
 const BackgroundImg = styled.div`
   width: 100%;
   height: 70vh;
-  background: url(${Background});
-  opacity: 0.4;
+  background: linear-gradient(rgba(82, 81, 81, 0.2), rgba(255, 255, 255, 0.8)), url(${Background});
   background-repeat: no-repeat;background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
@@ -54,11 +53,12 @@ const FormContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 8rem;
+  padding: 2rem;
   border-radius: 5%;
 
   @media screen and (min-width: 768px) {
   width: 50%;
+  padding: 5rem;
   }
 `
 const InputWrapper = styled.div`
