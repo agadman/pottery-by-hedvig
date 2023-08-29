@@ -1,0 +1,25 @@
+[
+    {
+      "id": "1",
+      "title": "News site",
+      "image": "https://images2.imgbox.com/c9/ef/UDEj5ASl_o.png?download=true",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "title": "Chatbot",
+      "image": "https://images2.imgbox.com/12/dd/clKnkh9U_o.jpeg?download=true",
+      "featured": true
+    },
+    { "id": "3",
+      "title": "Guess who",
+      "image": "https://images2.imgbox.com/4f/68/Iv9es37j_o.jpg?download=true",
+      "featured": true
+    },  
+    {
+      "id": "4",
+      "title": "Weather App",
+      "image": "https://images2.imgbox.com/c9/ef/UDEj5ASl_o.png?download=true",
+      "featured": true
+    }
+  ]

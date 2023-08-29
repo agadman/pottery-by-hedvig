@@ -13,7 +13,7 @@ const SubDropMenu = () => {
   return (
     <DropdownMenu>
       <NavLink to="/products">Cups</NavLink>
-      <NavLink to="products">Plates</NavLink>
+      <NavLink to="/products">Plates</NavLink>
     </DropdownMenu>
   )
 }
@@ -51,7 +51,7 @@ export const Navigation = () => {
                 <NavLink to="/about">About</NavLink>
               </li>
               <li onMouseEnter={() => setVisible(true)} onMouseLeave={() => setVisible(false)}>
-                <NavLink to="/products">Products</NavLink>
+                Products
                 {visible && <SubDropMenu />}
               </li>
               <li>
