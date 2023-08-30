@@ -17,4 +17,5 @@ div {
 
 h1, h2, h3 {
   font-weight: 600;
+  padding-bottom: 2rem;
 }

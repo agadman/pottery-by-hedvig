@@ -19,23 +19,25 @@ export const Home = () => {
           <h2>Pottery</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet massa pulvinar, lacinia quam ac, euismod velit. Mauris accumsan libero quis ultrices molestie. Ut scelerisque est purus, at cursus tellus pellentesque sed. Vivamus consequat, dolor non lacinia dignissim, felis lectus ornare nisl, nec porta tortor ipsum at magna.</p>
         </PotterySection>
-        <h2>Inspiration</h2>
-        <CarouselWrapper>
-          <Carousel>
-            <div>
-              <img src={InspirationOne} alt="test" />
-              <p className="legend">Legend 1</p>
-            </div>
-            <div>
-              <img src={InspirationTwo} alt="test" />
-              <p className="legend">Legend 2</p>
-            </div>
-            <div>
-              <img src={InspirationThree} alt="test" />
-              <p className="legend">Legend 3</p>
-            </div>
-          </Carousel>
-        </CarouselWrapper>
+        <InspirationSection>
+          <h2>Inspiration</h2>
+          <CarouselWrapper>
+            <Carousel>
+              <div>
+                <img src={InspirationOne} alt="test" />
+                <p className="legend">Legend 1</p>
+              </div>
+              <div>
+                <img src={InspirationTwo} alt="test" />
+                <p className="legend">Legend 2</p>
+              </div>
+              <div>
+                <img src={InspirationThree} alt="test" />
+                <p className="legend">Legend 3</p>
+              </div>
+            </Carousel>
+          </CarouselWrapper>
+        </InspirationSection>
       </InnerWrapper>
     </>
   )
@@ -52,14 +54,19 @@ const HeroImage = styled.div`
 const PotterySection = styled.section`
 width:75%;
 text-align: center;
+padding: 5rem 0;
+`
+const InspirationSection = styled.section`
+padding-bottom: 5rem;
+text-align: center;
 `
 const CarouselWrapper = styled.div`
   width: 100%;
-  img {
-    object-fit: cover;
-    width: 100%;
-  }
+  margin: 0 auto;
+    img {
+      object-fit: cover;
+    }
   @media screen and (min-width: 768px) {
-    width: 50%;
+    width: 35%;
   }
 `
