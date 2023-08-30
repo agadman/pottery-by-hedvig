@@ -12,8 +12,11 @@ import { InnerWrapper } from './global/GlobalWrappers';
 const SubDropMenu = () => {
   return (
     <DropdownMenu>
-      <NavLink to="/products">Cups</NavLink>
-      <NavLink to="/products">Plates</NavLink>
+      <NavLink to="/products/all">All products</NavLink>
+      <NavLink to="/products/cups">Cups</NavLink>
+      <NavLink to="/products/plates">Plates</NavLink>
+      <NavLink to="/products/bowls">Bowls</NavLink>
+      <NavLink to="/products/other">Other</NavLink>
     </DropdownMenu>
   )
 }
@@ -25,7 +28,7 @@ const MobileSubDropMenu = () => {
         <Item itemKey="cups" text="Cups" />
       </NavLink>
       <NavLink to="/products/plates">
-        <Item itemKey="plates" text="About" />
+        <Item itemKey="plates" text="Plates" />
       </NavLink>
     </DropdownMenu>
   )

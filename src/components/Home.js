@@ -2,10 +2,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'react-responsive-carousel';
+import InspirationOne from 'assets/Inspiration/inspiration_1.jpeg';
+import InspirationTwo from 'assets/Inspiration/inspiration_2.jpeg';
+import InspirationThree from 'assets/Inspiration/inspiration_3.jpeg';
 import Hero from '../assets/HeroImage_desktop.jpeg'
 import { InnerWrapper } from './global/GlobalWrappers';
-import { InspirationCard } from './InspirationCard'
-import data from '../data.json'
 import 'react-slideshow-image/dist/styles.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 
@@ -21,25 +22,24 @@ export const Home = () => {
         <h2>Inspiration</h2>
         <CarouselWrapper>
           <Carousel>
-            {data.filter((project) => project.featured).reverse().map((project) => (
-              <InspirationCard
-                key={project.id}
-                image={project.image}
-                featured />
-            ))}
+            <div>
+              <img src={InspirationOne} alt="test" />
+              <p className="legend">Legend 1</p>
+            </div>
+            <div>
+              <img src={InspirationTwo} alt="test" />
+              <p className="legend">Legend 2</p>
+            </div>
+            <div>
+              <img src={InspirationThree} alt="test" />
+              <p className="legend">Legend 3</p>
+            </div>
           </Carousel>
         </CarouselWrapper>
       </InnerWrapper>
     </>
   )
 }
-
-const CarouselWrapper = styled.div`
-  width: 100%;
-  @media screen and (min-width: 768px) {
-  width: 50%;
-  }
-`
 
 const HeroImage = styled.div`
     height: 75vh;
@@ -52,4 +52,14 @@ const HeroImage = styled.div`
 const PotterySection = styled.section`
 width:75%;
 text-align: center;
+`
+const CarouselWrapper = styled.div`
+  width: 100%;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
 `
