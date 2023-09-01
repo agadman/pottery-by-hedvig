@@ -19,7 +19,6 @@ export const About = () => {
         </LeftSide>
       </AboutContainer>
     </InnerWrapper>
-
   )
 }
 
