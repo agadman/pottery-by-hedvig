@@ -1,34 +1,11 @@
-/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
-import InspirationOne from 'assets/Inspiration/inspiration_1.jpeg';
-import InspirationTwo from 'assets/Inspiration/inspiration_2.jpeg';
-import InspirationThree from 'assets/Inspiration/inspiration_3.jpeg';
-import Flickity from 'react-flickity-component';
 import Hero from '../assets/HeroImage_desktop.jpeg';
 import HeroSmall from '../assets/hero_small.jpeg';
 import { InnerWrapper } from './global/GlobalWrappers';
-import { Slider } from './Swiper';
-
-const CarouselTwo = () => {
-  const flickityOptions = {
-    initialIndex: 2
-  }
-  return (
-    <Flickity
-      className="carousel" // default ''
-      elementType="div" // default 'div'
-      options={flickityOptions} // takes flickity options {}
-      disableImagesLoaded={false} // default false
-      reloadOnUpdate // default false
-      static>
-      <img src={InspirationOne} />
-      <img src={InspirationTwo} />
-      <img src={InspirationThree} />
-    </Flickity>
-  );
-}
+import CarouselTwo from './CarouselTwo.js'
+import Carousel from './Carousel.js'
 
 export const Home = () => {
   return (
@@ -41,8 +18,8 @@ export const Home = () => {
         </PotterySection>
         <InspirationSection>
           <h2>Inspiration</h2>
-          <Slider />
           <CarouselTwo />
+          <Carousel />
         </InspirationSection>
       </InnerWrapper>
     </>
@@ -71,5 +48,5 @@ padding: 5rem 0;
 const InspirationSection = styled.section`
 padding-bottom: 5rem;
 text-align: center;
-width: 50%;
+width: 100%;
 `
