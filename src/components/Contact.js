@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import { InnerWrapper } from './global/GlobalWrappers';
 import Background from '../assets/contact_background_desktop.jpeg'
@@ -8,13 +10,26 @@ export const Contact = () => {
   const [email, setEmail] = useState('Your email');
   const [message, setMessage] = useState('Your message');
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault(); // prevents the page from reloading when you hit “Send”
+
+    emailjs.sendForm('service_qm4xuqr', 'template_0b6sl99', form.current, 'uAroP6FRQlvQh6K9E')
+      .then((result) => {
+        // show the user a success message
+      }, (error) => {
+        // show the user an error
+      });
+  };
+
   return (
     <BackgroundImg>
       <InnerWrapper>
         <Content>
           <FormContainer>
             <h2>Contact me for orders</h2>
-            <form onSubmit={(event) => event.preventDefault()}>
+            <form ref={form} onSubmit={sendEmail}>
               <InputWrapper>
                 <input
                   type="text"
@@ -28,6 +43,7 @@ export const Contact = () => {
                   type="text"
                   onChange={(event) => setMessage(event.target.value)}
                   value={message} />
+                <button type="submit">SUBMIT</button>
               </InputWrapper>
             </form>
           </FormContainer>
