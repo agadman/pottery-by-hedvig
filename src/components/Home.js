@@ -19,7 +19,11 @@ export const Home = () => {
         <InspirationSection>
           <h2>Inspiration</h2>
           <CarouselTwo />
-          <Carousel />
+          <Wrapper>
+            <CarouselWrapper>
+              <Carousel />
+            </CarouselWrapper>
+          </Wrapper>
         </InspirationSection>
       </InnerWrapper>
     </>
@@ -49,4 +53,14 @@ const InspirationSection = styled.section`
 padding-bottom: 5rem;
 text-align: center;
 width: 100%;
+`
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+`
+const CarouselWrapper = styled.div`
+width: 50%;
 `

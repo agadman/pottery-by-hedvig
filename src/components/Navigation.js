@@ -12,7 +12,7 @@ import { InnerWrapper } from './global/GlobalWrappers';
 const SubDropMenu = () => {
   return (
     <DropdownMenu>
-      <NavLink to="/products/all">All products</NavLink>
+      <NavLink to="/products/all">All Products</NavLink>
       <NavLink to="/products/cups">Cups</NavLink>
       <NavLink to="/products/plates">Plates</NavLink>
       <NavLink to="/products/bowls">Bowls</NavLink>
@@ -24,11 +24,20 @@ const SubDropMenu = () => {
 const MobileSubDropMenu = () => {
   return (
     <DropdownMenu>
+      <NavLink to="/products/all">
+        <Item itemKey="all" text="All Products" />
+      </NavLink>
       <NavLink to="/products/cups">
         <Item itemKey="cups" text="Cups" />
       </NavLink>
       <NavLink to="/products/plates">
         <Item itemKey="plates" text="Plates" />
+      </NavLink>
+      <NavLink to="/products/bowls">
+        <Item itemKey="bowls" text="Bowls" />
+      </NavLink>
+      <NavLink to="/products/other">
+        <Item itemKey="other" text="Other" />
       </NavLink>
     </DropdownMenu>
   )
@@ -77,7 +86,7 @@ export const Navigation = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/products" onClick={() => setVisible((prev) => !prev)}>
+                  <NavLink onClick={() => setVisible((prev) => !prev)}>
                     <Item itemKey="products" text="Products" />
                   </NavLink>
                   {visible && <MobileSubDropMenu />}

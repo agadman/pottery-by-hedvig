@@ -22,6 +22,42 @@ import other2 from '../assets/products/other_2.jpeg';
 import other3 from '../assets/products/other_3.jpeg';
 import other4 from '../assets/products/other_4.jpeg';
 
+export const AllImages = () => {
+  const Images = [
+    cups1,
+    cups2,
+    cups3,
+    cups4,
+    cups5,
+    cups6,
+    cups7,
+    cups8,
+    cups9,
+    plates1,
+    bowls1,
+    bowls2,
+    bowls3,
+    bowls4,
+    bowls5,
+    bowls6,
+    bowls7,
+    other1,
+    other2,
+    other3,
+    other4
+  ];
+  return (
+    <>
+      <h2>All Products</h2>
+      <GalleryContainer>
+        {Images.map((img) => (
+          <ProductImage key={img} src={img} alt={img} />
+        ))}
+      </GalleryContainer>
+    </>
+  )
+}
+
 export const CupsImages = () => {
   const Images = [
     cups1,
