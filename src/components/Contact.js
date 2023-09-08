@@ -31,22 +31,25 @@ export const Contact = () => {
       <InnerWrapper>
         <Content>
           <FormContainer>
-            <h2>Contact me for orders</h2>
+            <h2>Contact me</h2>
             <form ref={form} onSubmit={sendEmail}>
               <InputWrapper>
                 <input
                   type="text"
                   onChange={(event) => setName(event.target.value)}
-                  value={name} />
+                  value={name}
+                  name="name" />
                 <input
                   type="text"
                   onChange={(event) => setEmail(event.target.value)}
-                  value={email} />
+                  value={email}
+                  name="email" />
                 <input
                   type="text"
                   onChange={(event) => setMessage(event.target.value)}
-                  value={message} />
-                <button type="submit">SUBMIT</button>
+                  value={message}
+                  name="message" />
+                <button type="submit">SEND MESSAGE</button>
               </InputWrapper>
             </form>
           </FormContainer>
