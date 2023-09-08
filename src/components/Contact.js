@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
@@ -14,13 +13,17 @@ export const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault(); // prevents the page from reloading when you hit “Send”
+    alert(`Name: ${name}, Email: ${email}, Message: ${message}`)
 
-    emailjs.sendForm('service_qm4xuqr', 'template_0b6sl99', form.current, 'uAroP6FRQlvQh6K9E')
+    emailjs.sendForm('service_qm4xuqr', 'template_0b6sl99', e.target, 'uAroP6FRQlvQh6K9E')
       .then((result) => {
         // show the user a success message
+        console.log(result.text);
       }, (error) => {
         // show the user an error
+        console.log(error.text);
       });
+    e.target.reset();
   };
 
   return (
