@@ -1,24 +1,29 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import validator from 'validator';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import { InnerWrapper } from './global/GlobalWrappers';
-import Background from '../assets/contact_background_desktop.jpeg'
+import Background from '../assets/contact_background_desktop.jpeg';
 
 export const Contact = () => {
-  const [name, setName] = useState('Your name');
-  const [email, setEmail] = useState('Your email');
-  const [message, setMessage] = useState('Your message');
+  const [message, setMessage] = useState('');
+  const validateEmail = (e) => {
+    const email = e.target.value;
 
-  const form = useRef();
-
+    if (validator.isEmail(email)) {
+      setMessage('Thank you');
+    } else {
+      setMessage('Please, enter valid Email!');
+    }
+  }
   const sendEmail = (e) => {
     e.preventDefault(); // prevents the page from reloading when you hit “Send”
-    alert(`Name: ${name}, Email: ${email}, Message: ${message}`)
 
     emailjs.sendForm('service_qm4xuqr', 'template_0b6sl99', e.target, 'uAroP6FRQlvQh6K9E')
       .then((result) => {
         // show the user a success message
         console.log(result.text);
+        setMessage('Email submitted');
       }, (error) => {
         // show the user an error
         console.log(error.text);
@@ -32,24 +37,23 @@ export const Contact = () => {
         <Content>
           <FormContainer>
             <h2>Contact me</h2>
-            <form ref={form} onSubmit={sendEmail}>
+            <form onSubmit={sendEmail}>
               <InputWrapper>
                 <input
                   type="text"
-                  onChange={(event) => setName(event.target.value)}
-                  value={name}
-                  name="name" />
+                  name="name"
+                  placeholder="Your name" />
                 <input
                   type="text"
-                  onChange={(event) => setEmail(event.target.value)}
-                  value={email}
-                  name="email" />
+                  name="email"
+                  placeholder="Your email"
+                  onChange={(e) => validateEmail(e)} />
                 <input
                   type="text"
-                  onChange={(event) => setMessage(event.target.value)}
-                  value={message}
-                  name="message" />
-                <button type="submit">SEND MESSAGE</button>
+                  name="message"
+                  placeholder="Your message" />
+                <button type="submit">SEND</button>
+                <span>{message}</span>
               </InputWrapper>
             </form>
           </FormContainer>
@@ -121,5 +125,16 @@ const InputWrapper = styled.div`
     padding: 5px 0;
     margin-bottom: 20px;
     width: 100%;
+  }
+
+  button {
+    padding: 8px 30px;
+    border-radius: 2rem;
+    border: 2px solid #A5ADA6;
+    margin-top: 20px;
+  }
+  button:hover {
+    background-color: #A5ADA6;
+    color: white;
   }
 `

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zoom } from 'react-slideshow-image';
+import { Slide } from 'react-slideshow-image';
 import InspirationOne from 'assets/Inspiration/inspiration_1.jpeg';
 import InspirationTwo from 'assets/Inspiration/inspiration_2.jpeg';
 import InspirationThree from 'assets/Inspiration/inspiration_3.jpeg';
@@ -30,10 +30,8 @@ const Carousel = () => {
     }
   ];
 
-  const indicators = () => (<div className="indicator" />);
-
   return (
-    <Zoom indicators={indicators} scale={1.4}>
+    <Slide slidesToScroll={1} slidesToShow={3} indicators>
       {imagesList.map((item) => {
         return (
           <div className="each-slide-effect">
@@ -41,7 +39,7 @@ const Carousel = () => {
           </div>
         )
       })}
-    </Zoom>
+    </Slide>
   );
 };
 

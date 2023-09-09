@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Hero from '../assets/HeroImage_desktop.jpeg';
 import HeroSmall from '../assets/hero_small.jpeg';
 import { InnerWrapper } from './global/GlobalWrappers';
-import CarouselTwo from './CarouselTwo.js'
 import Carousel from './Carousel.js'
 
 export const Home = () => {
@@ -18,12 +17,7 @@ export const Home = () => {
         </PotterySection>
         <InspirationSection>
           <h2>Inspiration</h2>
-          <CarouselTwo />
-          <Wrapper>
-            <CarouselWrapper>
-              <Carousel />
-            </CarouselWrapper>
-          </Wrapper>
+          <Carousel />
         </InspirationSection>
       </InnerWrapper>
     </>
@@ -53,14 +47,4 @@ const InspirationSection = styled.section`
 padding-bottom: 5rem;
 text-align: center;
 width: 100%;
-`
-const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-`
-const CarouselWrapper = styled.div`
-width: 50%;
 `
