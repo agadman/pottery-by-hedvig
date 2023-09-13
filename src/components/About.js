@@ -14,8 +14,14 @@ export const About = () => {
           </ImageContainer>
         </RightSide>
         <LeftSide>
-          <h2>A little bit about me</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet massa pulvinar, lacinia quam ac, euismod velit. Mauris accumsan libero quis ultrices molestie. Ut scelerisque est purus, at cursus tellus pellentesque sed. Vivamus consequat, dolor non lacinia dignissim, felis lectus ornare nisl, nec porta tortor ipsum at magna.</p>
+          <h2>By my hands to yours</h2>
+          <p>My love for pottery grew from a curiosity and urge of creating things with my hands. <br /> All my work is handmade, hand-thrown & in small batches.</p>
+          <p>I am today working with different kinds of clay, from porcelain to darker chocolate brown as well as different glazes. As I evolve on my pottery journey I will weed out which clay I am most comfortable working with as well as what color tones are my calling - but for now, I love exploring different shapes and glazes. My ultimate aim is to work with earthy tones, shapes and palettes found in our shared landscapes.</p>
+          <p>For the ones that are interested in a customised order this is a perfect match due to my flexibility. Please mind that every item is unique with its own irregularities evident in glazing and firing. All items are lead-free dishwasher, microwave and food safe. </p>
+          <p>Hopefully you find something that catches your eye or have an idea of a product that I can realize for you. All I ask is that you love them as much as I have loved making them. Thank you for supporting me and my little shop, it means a lot to have my creations as a part of your home.</p>
+          <LinkToAllProductsWrapper>
+            <a href="#">Take me to the products</a>
+          </LinkToAllProductsWrapper>
         </LeftSide>
       </AboutContainer>
     </InnerWrapper>
@@ -60,7 +66,7 @@ const ImageContainer = styled.div`
 
   @media screen and (min-width: 768px) {
   display: block;
-  background-color: rgba(132, 85, 55, 0.6);
+  background-color: rgba(132, 85, 55, 0.4);
   width: 100%;
   height: 500px;
   position: relative;
@@ -68,7 +74,7 @@ const ImageContainer = styled.div`
 
 @media screen and (min-width: 1024px) {
   display: block;
-  background-color: rgba(132, 85, 55, 0.6);
+  background-color: rgba(132, 85, 55, 0.4);
   width: 100%;
   height: 500px;
   position: relative;
@@ -81,8 +87,8 @@ const HeadShotImage = styled.img`
   width: 500px;
   object-fit: cover;
   position: absolute;
-  top: 50px;
-  left: -60px;
+  top: 15px;
+  left: -15px;
   } 
 @media screen and (min-width: 1024px) {
   border: 5px solid #fff;
@@ -90,7 +96,23 @@ const HeadShotImage = styled.img`
   width: 500px;
   object-fit: cover;
   position: absolute;
-  top: 50px;
-  left: -60px;
+  top: 15px;
+  left: -15px;
   } 
+`
+const LinkToAllProductsWrapper = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 600;
+
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: #464646
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 `

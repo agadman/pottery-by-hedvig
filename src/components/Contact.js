@@ -37,6 +37,7 @@ export const Contact = () => {
         <Content>
           <FormContainer>
             <h2>Contact me</h2>
+            <p>Find anything you like? Reach out and lets chat.</p>
             <form onSubmit={sendEmail}>
               <InputWrapper>
                 <input
@@ -83,8 +84,8 @@ const BackgroundImg = styled.div`
   align-items: center;
 `
 const FormContainer = styled.div`
-  background-color: rgba(255,255,255, 0.8);
-  /*background-color: rgba(249, 249, 234, 0.8);*/
+  // background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(241, 238, 235, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,6 +96,7 @@ const FormContainer = styled.div`
   border-radius: 5%;
   form {
     width: 75%;
+    margin-top: 20px;
   }
 
   @media screen and (min-width: 640px) {
@@ -128,6 +130,7 @@ const InputWrapper = styled.div`
   }
 
   button {
+    background-color: rgba(241, 238, 235, 0.9);
     padding: 8px 30px;
     border-radius: 2rem;
     border: 2px solid #A5ADA6;

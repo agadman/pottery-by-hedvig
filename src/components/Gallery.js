@@ -176,9 +176,11 @@ export const OtherImages = () => {
   )
 }
 const GalleryContainer = styled.div`
+  padding: 20px; 
+  background-color: #b5aeb4;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 15px;
   @media (min-width: 540px) {
     grid-template-columns: repeat(2, 1fr);
   }
