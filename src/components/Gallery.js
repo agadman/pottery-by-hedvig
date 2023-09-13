@@ -177,7 +177,6 @@ export const OtherImages = () => {
 }
 const GalleryContainer = styled.div`
   padding: 20px; 
-  background-color: #b5aeb4;
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
@@ -186,9 +185,11 @@ const GalleryContainer = styled.div`
   }
   @media screen and (min-width: 940px) {
     grid-template-columns: repeat(3, 1fr);
+    background-color: #b5aeb4;
   }
   @media screen and (min-width: 1206px) {
     grid-template-columns: repeat(4, 1fr);
+    background-color: #b5aeb4;
   }
 `
 const ProductImage = styled.img`
