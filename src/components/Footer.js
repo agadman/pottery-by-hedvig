@@ -12,7 +12,7 @@ export const Footer = () => {
       </LogoWrapper>
       <SocialMediaWrapper>
         <a
-          href="https://github.com/agadman"
+          href="https://www.instagram.com/potterybyhedvig/?igshid=MzRlODBiNWFlZA%3D%3D"
           target="_blank"
           rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} size="2x" color="var(--color-dark-grey)" />

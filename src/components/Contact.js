@@ -19,7 +19,7 @@ export const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault(); // prevents the page from reloading when you hit “Send”
 
-    emailjs.sendForm('service_qm4xuqr', 'template_0b6sl99', e.target, 'uAroP6FRQlvQh6K9E')
+    emailjs.sendForm('service_uck2h3p', 'template_9hxurzo', e.target, 'L5NEW2-j4ETKz_ULx')
       .then((result) => {
         // show the user a success message
         console.log(result.text);

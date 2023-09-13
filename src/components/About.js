@@ -14,7 +14,7 @@ export const About = () => {
           </ImageContainer>
         </RightSide>
         <LeftSide>
-          <h2>About</h2>
+          <h2>A little bit about me</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet massa pulvinar, lacinia quam ac, euismod velit. Mauris accumsan libero quis ultrices molestie. Ut scelerisque est purus, at cursus tellus pellentesque sed. Vivamus consequat, dolor non lacinia dignissim, felis lectus ornare nisl, nec porta tortor ipsum at magna.</p>
         </LeftSide>
       </AboutContainer>
