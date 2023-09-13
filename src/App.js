@@ -7,6 +7,7 @@ import { Products } from 'components/Products';
 import { Contact } from 'components/Contact';
 import { Navigation } from 'components/Navigation';
 import { Footer } from 'components/Footer';
+import { NotFound } from 'components/errors/404';
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
           <Route path="/products" />
           <Route path="/products/:submenuId" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </OuterWrapper>

@@ -7,8 +7,6 @@ import cups4 from '../assets/products/cups_4.jpeg';
 import cups5 from '../assets/products/cups_5.jpeg';
 import cups6 from '../assets/products/cups_6.jpeg';
 import cups7 from '../assets/products/cups_7.jpeg';
-import cups8 from '../assets/products/cups_8.jpeg';
-import cups9 from '../assets/products/cups_9.jpeg';
 import plates1 from '../assets/products/plates_1.jpeg';
 import bowls1 from '../assets/products/bowls_1.jpeg';
 import bowls2 from '../assets/products/bowls_2.jpeg';
@@ -17,10 +15,25 @@ import bowls4 from '../assets/products/bowls_4.jpeg';
 import bowls5 from '../assets/products/bowls_5.jpeg';
 import bowls6 from '../assets/products/bowls_6.jpeg';
 import bowls7 from '../assets/products/bowls_7.jpeg';
+import bowls8 from '../assets/products/bowls_8.jpeg';
+import bowls9 from '../assets/products/bowls_9.jpeg';
+import bowls10 from '../assets/products/bowls_10.jpeg';
+import bowls11 from '../assets/products/bowls_11.jpeg';
+import bowls12 from '../assets/products/bowls_12.jpeg';
 import other1 from '../assets/products/other_1.jpeg';
 import other2 from '../assets/products/other_2.jpeg';
 import other3 from '../assets/products/other_3.jpeg';
 import other4 from '../assets/products/other_4.jpeg';
+import other5 from '../assets/products/other_5.jpeg';
+import other6 from '../assets/products/other_6.jpeg';
+import other7 from '../assets/products/other_7.jpeg';
+import other8 from '../assets/products/other_8.jpeg';
+import other9 from '../assets/products/other_9.jpeg';
+import other10 from '../assets/products/other_10.jpeg';
+import other11 from '../assets/products/other_11.jpeg';
+import other12 from '../assets/products/other_12.jpeg';
+import other13 from '../assets/products/other_13.jpeg';
+import other14 from '../assets/products/other_14.jpeg';
 
 export const AllImages = () => {
   const Images = [
@@ -31,8 +44,6 @@ export const AllImages = () => {
     cups5,
     cups6,
     cups7,
-    cups8,
-    cups9,
     plates1,
     bowls1,
     bowls2,
@@ -41,10 +52,25 @@ export const AllImages = () => {
     bowls5,
     bowls6,
     bowls7,
+    bowls8,
+    bowls9,
+    bowls10,
+    bowls11,
+    bowls12,
     other1,
     other2,
     other3,
-    other4
+    other4,
+    other5,
+    other6,
+    other7,
+    other8,
+    other9,
+    other10,
+    other11,
+    other12,
+    other13,
+    other14
   ];
   return (
     <>
@@ -66,9 +92,7 @@ export const CupsImages = () => {
     cups4,
     cups5,
     cups6,
-    cups7,
-    cups8,
-    cups9
+    cups7
   ];
   return (
     <>
@@ -105,7 +129,12 @@ export const BowlsImages = () => {
     bowls4,
     bowls5,
     bowls6,
-    bowls7
+    bowls7,
+    bowls8,
+    bowls9,
+    bowls10,
+    bowls11,
+    bowls12
   ];
   return (
     <>
@@ -123,7 +152,17 @@ export const OtherImages = () => {
     other1,
     other2,
     other3,
-    other4
+    other4,
+    other5,
+    other6,
+    other7,
+    other8,
+    other9,
+    other10,
+    other11,
+    other12,
+    other13,
+    other14
   ];
   return (
     <>

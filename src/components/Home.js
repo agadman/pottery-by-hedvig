@@ -2,7 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Hero from '../assets/HeroImage_desktop.jpeg';
-import HeroSmall from '../assets/hero_small.jpeg';
+// import HeroSmall from '../assets/hero_small.jpeg';
+import MobileImg from '../assets/mobileImg.jpeg';
 import { InnerWrapper } from './global/GlobalWrappers';
 import Carousel from './Carousel.js'
 
@@ -27,7 +28,7 @@ export const Home = () => {
 const HeroImage = styled.div`
     height: 100vh;
     width: 100%;
-    background: url(${HeroSmall});
+    background: url(${MobileImg});
     background-repeat: no-repeat;background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
@@ -39,9 +40,12 @@ const HeroImage = styled.div`
   }
 `
 const PotterySection = styled.section`
-width:75%;
+width: 100%;
 text-align: center;
 padding: 5rem 0;
+  @media screen and (min-width: 768px) {
+    width: 75%;
+  }
 `
 const InspirationSection = styled.section`
 padding-bottom: 5rem;
