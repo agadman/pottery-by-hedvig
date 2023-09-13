@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { OuterWrapper } from 'components/global/GlobalWrappers';
 import { Home } from 'components/Home';
 import { About } from 'components/About';
@@ -7,7 +7,6 @@ import { Products } from 'components/Products';
 import { Contact } from 'components/Contact';
 import { Navigation } from 'components/Navigation';
 import { Footer } from 'components/Footer';
-import { NotFound } from 'components/errors/404';
 
 export const App = () => {
   return (
@@ -20,7 +19,7 @@ export const App = () => {
           <Route path="/products" />
           <Route path="/products/:submenuId" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </OuterWrapper>
