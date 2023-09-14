@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -21,22 +23,22 @@ const SubDropMenu = () => {
   )
 }
 
-const MobileSubDropMenu = () => {
+const MobileSubDropMenu = ({ setIsOpen }) => {
   return (
     <DropdownMenu>
-      <NavLink to="/products/all">
+      <NavLink to="/products/all" onClick={() => setIsOpen(false)}>
         <Item itemKey="all" text="All Products" />
       </NavLink>
-      <NavLink to="/products/cups">
+      <NavLink to="/products/cups" onClick={() => setIsOpen(false)}>
         <Item itemKey="cups" text="Cups" />
       </NavLink>
-      <NavLink to="/products/plates">
+      <NavLink to="/products/plates" onClick={() => setIsOpen(false)}>
         <Item itemKey="plates" text="Plates" />
       </NavLink>
-      <NavLink to="/products/bowls">
+      <NavLink to="/products/bowls" onClick={() => setIsOpen(false)}>
         <Item itemKey="bowls" text="Bowls" />
       </NavLink>
-      <NavLink to="/products/other">
+      <NavLink to="/products/other" onClick={() => setIsOpen(false)}>
         <Item itemKey="other" text="Other" />
       </NavLink>
     </DropdownMenu>
@@ -76,23 +78,21 @@ export const Navigation = () => {
             <Menu className="burger-menu" isOpen={isOpen} selectedKey="entry" onClose={() => setIsOpen(false)}>
               <ul>
                 <li>
-                  <NavLink to="/">
+                  <NavLink to="/" onClick={() => setIsOpen(false)}>
                     <Item itemKey="home" text="Home" />
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/about">
+                  <NavLink to="/about" onClick={() => setIsOpen(false)}>
                     <Item itemKey="about" text="About" />
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink onClick={() => setVisible((prev) => !prev)}>
-                    <Item itemKey="products" text="Products" />
-                  </NavLink>
-                  {visible && <MobileSubDropMenu />}
+                <li onClick={() => setVisible((prev) => !prev)}>
+                  <Item itemKey="products" text="Products" />
+                  {visible && <MobileSubDropMenu setIsOpen={setIsOpen} />}
                 </li>
                 <li>
-                  <NavLink to="/contact">
+                  <NavLink to="/contact" onClick={() => setIsOpen(false)}>
                     <Item itemKey="contact" text="Contact" />
                   </NavLink>
                 </li>
