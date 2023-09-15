@@ -135,6 +135,7 @@ const InputWrapper = styled.div`
     border-radius: 2rem;
     border: 2px solid #A5ADA6;
     margin-top: 20px;
+    color: #333;
   }
   button:hover {
     background-color: #A5ADA6;
