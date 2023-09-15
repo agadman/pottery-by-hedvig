@@ -20,7 +20,7 @@ export const About = () => {
           <p>For the ones that are interested in a customised order this is a perfect match due to my flexibility. Please mind that every item is unique with its own irregularities evident in glazing and firing. All items are lead-free dishwasher, microwave and food safe. </p>
           <p>Hopefully you find something that catches your eye or have an idea of a product that I can realize for you. All I ask is that you love them as much as I have loved making them. Thank you for supporting me and my little shop, it means a lot to have my creations as a part of your home.</p>
           <LinkToAllProductsWrapper>
-            <a href="#">Take me to the products</a>
+            <a href="/products/all">Take me to the products</a>
           </LinkToAllProductsWrapper>
         </LeftSide>
       </AboutContainer>

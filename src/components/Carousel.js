@@ -4,6 +4,7 @@ import InspirationOne from 'assets/Inspiration/inspiration_1.jpeg';
 import InspirationTwo from 'assets/Inspiration/inspiration_2.jpeg';
 import InspirationThree from 'assets/Inspiration/inspiration_3.jpeg';
 import InspirationFour from 'assets/Inspiration/inspiration_4.jpeg';
+import InspirationFive from 'assets/Inspiration/inspiration_5.jpeg';
 import 'react-slideshow-image/dist/styles.css';
 
 const responsiveSettings = [
@@ -44,6 +45,11 @@ const Carousel = () => {
       id: 4,
       src: InspirationFour,
       alt: 'Image 4'
+    },
+    {
+      id: 5,
+      src: InspirationFive,
+      alt: 'Image 5'
     }
   ];
 
