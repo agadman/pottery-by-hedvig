@@ -33,8 +33,7 @@ export const Gallery = ({ category }) => {
             className="product-image"
             key={index}
             small={img}
-            large={img}
-            alt="Hello World!" />
+            large={img} />
         ))}
       </GalleryContainer>
     </>
@@ -60,7 +59,7 @@ const GalleryContainer = styled.div`
  }
  .product-image {
    width: 100%;
-   // height: 300px;
+   height: 300px;
    object-fit: cover;
  }
 `

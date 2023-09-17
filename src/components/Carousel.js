@@ -87,7 +87,7 @@ const Carousel = () => {
     <Slide slidesToScroll={1} slidesToShow={1} indicators responsive={responsiveSettings}>
       {imagesList.map((item) => {
         return (
-          <div className="each-slide-effect">
+          <div className="each-slide-effect" key={item.id}>
             <img src={item.src} alt={item.alt} />
           </div>
         )
