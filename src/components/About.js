@@ -50,6 +50,9 @@ const RightSide = styled.div`
   }
 `
 const LeftSide = styled.div`
+  h2 {
+    margin-top: 4rem;
+  }
   @media screen and (min-width: 768px) {
     width: 100%;
     padding: 8rem 0;
@@ -103,6 +106,7 @@ const LinkToAllProductsWrapper = styled.div`
   font-weight: 600;
   a {
     text-decoration: none;
+    color: #464646
   }
   a:visited {
     color: #464646
