@@ -55,7 +55,10 @@ const LeftSide = styled.div`
   }
   @media screen and (min-width: 768px) {
     width: 100%;
-    padding: 8rem 0;
+    padding: 2rem 0;
+    h2 {
+    margin-top: 1rem;
+  }
   }
   @media screen and (min-width: 1024px) {
     width: 100%;
