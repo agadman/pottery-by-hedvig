@@ -8,7 +8,7 @@ import 'burger-menu/lib/index.css';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/Logo.png';
 import { InnerWrapper } from './global/GlobalWrappers';
 
 const SubDropMenu = () => {
