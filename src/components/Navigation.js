@@ -106,7 +106,7 @@ export const Navigation = () => {
 }
 
 const Header = styled.header`
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `
 const LogoAndNavContainer = styled.div`
   display: flex;
@@ -121,22 +121,22 @@ const NavBar = styled.nav`
   }
 `
 const LogoImage = styled.img`
-    width: 7rem;
-    transform: rotate(-40deg);
-    display: inline-block;
+  width: 7rem;
+  // transform: rotate(-40deg);
+  display: inline-block;
 `
 const ListWrapper = styled.ul`
-    list-style: none;
-    display: flex;
-    li {
-        padding: 0 15px;   
-        position: relative;
-    }
-    li a {
-        text-decoration: none;
-        color: #333;
-    }
-    .active {
+  list-style: none;
+  display: flex;
+  li {
+    padding: 0 15px;   
+    position: relative;
+  }
+  li a {
+    text-decoration: none;
+    color: #333;
+  }
+  .active {
     text-decoration: underline;
   }
   a:hover{
@@ -154,7 +154,7 @@ const DropdownMenu = styled.ul`
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       padding: 12px 16px;
       z-index: 1;
-  }
+    }
 `
 const MobileNavBar = styled.div`
   .burger-menu {
@@ -167,12 +167,12 @@ const MobileNavBar = styled.div`
     list-style: none;
   }
   li a {
-        text-decoration: none;
-    }
-    .active {
+    text-decoration: none;
+  }
+  .active {
     text-decoration: underline;
   }
   @media screen and (min-width: 849px) {
     display: none !important;
   } 
-  `
+`

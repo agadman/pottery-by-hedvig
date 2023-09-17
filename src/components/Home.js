@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
-import Hero from '../assets/HeroImage_desktop.jpeg';
+import HeroLarge from '../assets/hero_large.jpeg';
 import HeroSmall from '../assets/hero_small.jpeg';
 import { InnerWrapper } from './global/GlobalWrappers';
 import Carousel from './Carousel.js'
@@ -28,22 +28,22 @@ export const Home = () => {
 }
 
 const HeroImage = styled.div`
-    height: 100vh;
-    width: 100%;
-    background: url(${HeroSmall});
+  height: 100vh;
+  width: 100%;
+  background: url(${HeroSmall});
+  background-repeat: no-repeat;background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  @media screen and (min-width: 768px) {
+    background: url(${HeroLarge});
     background-repeat: no-repeat;background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
-    @media screen and (min-width: 768px) {
-      background: url(${Hero});
-      background-repeat: no-repeat;background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover; 
   }
 `
 const PotterySection = styled.section`
-width: 100%;
-padding: 5rem 0;
+  width: 100%;
+  padding: 5rem 0;
   @media screen and (min-width: 768px) {
     width: 75%;
     text-align: center;
@@ -54,7 +54,7 @@ const HeadingWrapper = styled.div`
   text-align: center;
 `
 const InspirationSection = styled.section`
-padding-bottom: 5rem;
-text-align: center;
-width: 100%;
+  padding-bottom: 5rem;
+  text-align: center;
+  width: 100%;
 `

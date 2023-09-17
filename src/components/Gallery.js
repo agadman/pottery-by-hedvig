@@ -42,24 +42,25 @@ export const Gallery = ({ category }) => {
 };
 
 const GalleryContainer = styled.div`
- padding: 30px;
  display: grid;
  grid-template-columns: 1fr;
- gap: 15px;
+ gap: 10px;
  @media (min-width: 540px) {
    grid-template-columns: repeat(2, 1fr);
  }
  @media screen and (min-width: 940px) {
    grid-template-columns: repeat(3, 1fr);
-   background-color: #b5aeb4;
+   background-color: rgba(132, 85, 55, 0.3);
+   padding: 30px;
  }
  @media screen and (min-width: 1206px) {
    grid-template-columns: repeat(4, 1fr);
-   background-color: rgba(181, 174, 180, 0.3);
+   background-color: rgba(132, 85, 55, 0.3);
+   padding: 30px;
  }
  .product-image {
    width: 100%;
-   height: 300px;
+   // height: 300px;
    object-fit: cover;
  }
 `

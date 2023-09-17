@@ -87,7 +87,7 @@ const HeadShotImage = styled.img`
   width: 500px;
   object-fit: cover;
   position: absolute;
-  top: 15px;
+  top: 20px;
   left: -15px;
   } 
 @media screen and (min-width: 1024px) {
@@ -96,7 +96,7 @@ const HeadShotImage = styled.img`
   width: 500px;
   object-fit: cover;
   position: absolute;
-  top: 15px;
+  top: 20px;
   left: -15px;
   } 
 `

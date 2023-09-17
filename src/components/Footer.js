@@ -23,22 +23,21 @@ export const Footer = () => {
 }
 
 const FooterSection = styled.footer`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--color-blue);
-    width: 100%;
-    padding: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-blue);
+  width: 100%;
+  padding: 4%;
 `
 const LogoWrapper = styled.div`
-    padding: 1%;
+  padding: 1%;
 `
 const LogoImage = styled.img`
-    width: 7rem;
-    transform: rotate(-40deg);
+  width: 7rem;
+  // transform: rotate(-40deg);
 `
 const SocialMediaWrapper = styled.div`
-    padding: 1%;
+  padding: 1%;
 `
-
