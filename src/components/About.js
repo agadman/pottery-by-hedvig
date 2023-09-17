@@ -29,55 +29,51 @@ export const About = () => {
 }
 
 const AboutContainer = styled.div`
-margin: 8rem 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-@media screen and (min-width: 1024px) {
+  margin: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
     flex-direction: row-reverse;
   }
 `
-
 const RightSide = styled.div`
-@media screen and (min-width: 768px) {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @media screen and (min-width: 1024px) {
     width: 50%;
   }
 `
 const LeftSide = styled.div`
-@media screen and (min-width: 768px) {
-  width: 100%;
-  padding: 8rem 0;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    padding: 8rem 0;
   }
-@media screen and (min-width: 1024px) {
-  width: 100%;
-  padding-right: 8rem;
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+    padding-right: 8rem;
   }
 `
 const ImageContainer = styled.div`
   background-color: none;
-
   @media screen and (min-width: 768px) {
-  display: block;
-  background-color: rgba(132, 85, 55, 0.4);
-  width: 100%;
-  height: 500px;
-  position: relative;
+    display: block;
+    background-color: rgba(132, 85, 55, 0.4);
+    width: 100%;
+    height: 500px;
+    position: relative;
   }
-
-@media screen and (min-width: 1024px) {
-  display: block;
-  background-color: rgba(132, 85, 55, 0.4);
-  width: 100%;
-  height: 500px;
-  position: relative;
+  @media screen and (min-width: 1024px) {
+    display: block;
+    background-color: rgba(132, 85, 55, 0.4);
+    width: 100%;
+    height: 500px;
+    position: relative;
   }
 `
 const HeadShotImage = styled.img`
@@ -89,7 +85,7 @@ const HeadShotImage = styled.img`
   position: absolute;
   top: 20px;
   left: -15px;
-  } 
+} 
 @media screen and (min-width: 1024px) {
   border: 5px solid #fff;
   height: 500px;
@@ -98,14 +94,13 @@ const HeadShotImage = styled.img`
   position: absolute;
   top: 20px;
   left: -15px;
-  } 
+} 
 `
 const LinkToAllProductsWrapper = styled.div`
   width: 100%;
   text-align: center;
   margin-top: 2rem;
   font-weight: 600;
-
   a {
     text-decoration: none;
   }

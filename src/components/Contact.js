@@ -3,7 +3,8 @@ import validator from 'validator';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import { InnerWrapper } from './global/GlobalWrappers';
-import Background from '../assets/contact_background_desktop.jpeg';
+import BackgroundLarge from '../assets/contact_background_large.jpeg';
+import BackgroundSmall from '../assets/contact_background_small.jpeg';
 
 export const Contact = () => {
   const [message, setMessage] = useState('');
@@ -75,16 +76,21 @@ const Content = styled.main`
 const BackgroundImg = styled.div`
   width: 100%;
   height: auto;
-  background: linear-gradient(rgba(82, 81, 81, 0.2), rgba(255, 255, 255, 0.8)), url(${Background});
+  background: linear-gradient(rgba(82, 81, 81, 0.2), rgba(255, 255, 255, 0.8)), url(${BackgroundSmall});
   background-repeat: no-repeat;background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(rgba(82, 81, 81, 0.2), rgba(255, 255, 255, 0.8)), url(${BackgroundLarge});
+    background-repeat: no-repeat;background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+  }
 `
 const FormContainer = styled.div`
-  // background-color: rgba(255,255,255, 0.8);
   background-color: rgba(241, 238, 235, 0.9);
   display: flex;
   flex-direction: column;
@@ -98,28 +104,28 @@ const FormContainer = styled.div`
     width: 75%;
     margin-top: 20px;
   }
-
   @media screen and (min-width: 640px) {
-  form {
-    width: 55%;
+    width: 75%;
+    form {
+      width: 55%;
+    }
   }
-  }
-
   @media screen and (min-width: 768px) {
-  width: 50%;
+  width: 70%;
   padding: 8rem 0;
-
-  form {
-    width: 50%;
+    form {
+      width: 50%;
+    }
   }
-  }
+  @media screen and (min-width: 940px) {
+    width: 60%;
+ }
 `
 const InputWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   input {
     border: none;
     border-bottom: 2px solid #333;
@@ -128,7 +134,6 @@ const InputWrapper = styled.div`
     margin-bottom: 20px;
     width: 100%;
   }
-
   button {
     background-color: rgba(241, 238, 235, 0.9);
     padding: 8px 30px;
