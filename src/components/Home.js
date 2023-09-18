@@ -15,8 +15,10 @@ export const Home = () => {
           <HeadingWrapper>
             <h2>Welcome to Pottery by Hedvig</h2>
           </HeadingWrapper>
-          <p>Pottery by Hedvig represents the pursuit of embracing a passion originating from a young age, venturing into various pottery studios and ceramic shops on the charming island of Gotland in the Baltic Sea, situated just off the eastern coast of Sweden.</p>
-          <p>Each piece of my pottery is hand crafted with care and precision, ensuring that no two are exactly alike. Every piece undergoes the transformation from a simple lump of clay to a functional work of art adding a one-of-a-kind addition to your home or collection. Please look further on the website to view my crafts and hopefully you find something you like!</p>
+          <p>Pottery by Hedvig represents a passion for the hand made. My interest in pottery is life long and strongly bonds to my experiences visiting studios and ceramic shops on the charming island of Gotland situated just off the eastern coast of Sweden in the baltic sea. I have now taken on the journey of amplifying that interest by my own hands and creativity - and I am loving every minute of it.</p>
+          <p>Each piece of my pottery is hand crafted with care and precision and the beauty is that no two pieces are ever exactly alike. It starts out with a lump of clay and turns into a one-of-a-kind addition to your home and everyday use. (Of course I carefully weigh and measure the pieces to make series of cups etc.)</p>
+          <p>Please look further on the website to view my crafts and hopefully you find something you like! </p>
+          <p>Much love,<br />Hedvig</p>
         </PotterySection>
         <InspirationSection>
           <h3>Follow Me On My Journey</h3>
