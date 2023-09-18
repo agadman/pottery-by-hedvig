@@ -29,7 +29,12 @@ const FooterSection = styled.footer`
   flex-direction: column;
   background-color: var(--color-blue);
   width: 100%;
-  padding: 4%;
+  padding: 8%;
+  gap: 15px;
+  @media screen and (min-width: 768px) {
+    padding: 4%;
+    gap: 0;
+  }
 `
 const LogoWrapper = styled.div`
   padding: 1%;
