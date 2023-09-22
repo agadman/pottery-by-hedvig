@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import validator from 'validator';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
@@ -7,6 +8,7 @@ import BackgroundLarge from '../assets/contact_background_large.jpeg';
 import BackgroundSmall from '../assets/contact_background_small.jpeg';
 
 export const Contact = () => {
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
   const [message, setMessage] = useState('');
   const validateEmail = (e) => {
     const email = e.target.value;
@@ -20,16 +22,29 @@ export const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault(); // prevents the page from reloading when you hit “Send”
 
-    emailjs.sendForm('service_uck2h3p', 'template_9hxurzo', e.target, 'L5NEW2-j4ETKz_ULx')
-      .then((result) => {
-        // show the user a success message
-        console.log(result.text);
-        setMessage('Email submitted');
-      }, (error) => {
-        // show the user an error
-        console.log(error.text);
-      });
-    e.target.reset();
+    if (recaptchaValue) {
+      emailjs
+        .sendForm(
+          'service_uck2h3p',
+          'template_9hxurzo',
+          e.target,
+          'L5NEW2-j4ETKz_ULx'
+        )
+        .then(
+          (result) => {
+            // show the user a success message
+            console.log(result.text);
+            setMessage('Email submitted');
+          },
+          (error) => {
+            // show the user an error
+            console.log(error.text);
+          }
+        );
+      e.target.reset();
+    } else {
+      setMessage('Please complete the reCAPTCHA.');
+    }
   };
 
   return (
@@ -54,6 +69,9 @@ export const Contact = () => {
                   type="text"
                   name="message"
                   placeholder="Your message" />
+                <ReCAPTCHA
+                  sitekey="6LfLl0QoAAAAAGQKMXjfgr9Dpj9uWioJXFBvXGGF"
+                  onChange={(value) => setRecaptchaValue(value)} />
                 <button type="submit">SEND</button>
                 <span>{message}</span>
               </InputWrapper>
