@@ -1,16 +1,16 @@
-Pottery By Hedvig
+## Pottery By Hedvig
 
 An application showcasing Artist Hedvig's pottery
 
-Showcase pottery
+Pottery Showcase
 Contact
 
 
-Tech
+## Tech
 
 React, Javascript, React Router
 
-View it live
+## View it live
 
 https://potterybyhedvig.com/
 
